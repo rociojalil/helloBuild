@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { Alert } from 'react-bootstrap';
+import './Registration.css'
 // import Home from '../home/Home';
+import swal from 'sweetalert';
 
 function Login() {
 
@@ -8,7 +10,7 @@ function Login() {
     const [passwordlog, setPasswordlog] = useState(" ");
 
     const [flag, setFlag] = useState(false);
-
+    
     const [home, setHome] = useState(true);
 
 
@@ -20,40 +22,62 @@ function Login() {
 
         if (!emaillog || !passwordlog) {
             setFlag(true);
-            console.log("EMPTY");
+            return swal("Error", "Missing data entry, try again!", "error")
+            
+            // console.log("EMPTY");
         } else if ((passwordlog !== pass) || (emaillog !== mail)) {
             setFlag(true);
+            return swal("Error", "There was an error in the password or email, try again!", "error")
         } else {
             setHome(!home);
+            swal("Succes!", "Succes!", "success")
             setFlag(false);
         }
     }
 
+   
 
     return (
         <div>
             {home ? <form onSubmit={handleLogin}>
-                <h3>LogIn</h3>
+            <div className="body">
+
+            <div className="form-container">
+            <h4 className="form-heading">Log In</h4>
+            <div className="login-form">
+
+
                 <div className="form-group">
                     <label>Email</label>
-                    <input type="email" className="form-control" placeholder="Enter email" onChange={(event) => setEmaillog(event.target.value)} />
+                    <br/>
+                <input type="email" className="form-control" placeholder="Enter E-mail" name="email" onChange={(event) => setEmaillog(event.target.value)} />
+                <label>Password</label>
+                <br/>
+                <input type="password" className="form-control" placeholder="Enter Password" name="password" onChange={(event) => setPasswordlog(event.target.value)}/>
+
+
+
+                </div>
+                <button type="submit" class="signup-btn">
+             Login <i class="fas fa-arrow-right"></i>
+         </button>
+        
+        
+                
+                </div>
+                </div>
                 </div>
 
-                <div className="form-group">
-                    <label>Password</label>
-                    <input type="password" className="form-control" placeholder="Enter password" onChange={(event) => setPasswordlog(event.target.value)} />
-                </div>
-
-                <button type="submit" className="btn btn-dark btn-lg btn-block">Login</button>
-
-                {flag && <Alert color='primary' variant="warning" >
-                    Fill correct Info else keep trying.
-                        </Alert>}
+                {flag }
             </form>
                 : <h1>HOLA INGRESASTE</h1>
             }
+          
+            
 
         </div>
+        
+         
     )
 }
 

@@ -82,7 +82,7 @@ function Registration() {
                 </div>
                 
 
-            </form> : <Login />} </div> : <h1>Ha ocurrido un error</h1>}
+            </form> : <Login />} </div> : <h1>ingresaste</h1>}
             </div>
             
         
