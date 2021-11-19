@@ -3,9 +3,10 @@ import {
   Route
 } from "react-router-dom";
 import './App.css';
+import 'boxicons';
 import React from 'react';
 import Landing from './Components/Landing/Landing';
-import Home from './Components/Home/Home';
+import Home from './Components/Home/Home.jsx';
 
 
 

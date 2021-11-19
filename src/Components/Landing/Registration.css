@@ -4,14 +4,17 @@
     box-sizing: border-box;
 }
 
-body{
+.body{
     background-color: #131313;
-    min-height: 100vh;
-    display: flex;
+    /* min-height: 100vh; */
+    width: 500px;
+    margin-left: 515px;
+
     justify-content: center;
     align-items: center;
     font-family: 'Poppins', sans-serif;
 }
+
 
 .form-container{
     background-color: #fefefe65;

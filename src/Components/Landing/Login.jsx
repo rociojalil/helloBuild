@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { Alert } from 'react-bootstrap';
 import './Registration.css'
 // import Home from '../home/Home';
 import swal from 'sweetalert';
@@ -28,7 +27,7 @@ function Login() {
             // console.log("EMPTY");
         } else if ((passwordlog !== pass) || (emaillog !== mail)) {
             setFlag(true);
-            return swal("Error", "There was an error in the password or email, try again!", "error")
+            return swal("Error", "Wrong email or password, try again!", "error")
         } else {
             setHome(!home);
             swal("Succes!", "Succes!", "success")

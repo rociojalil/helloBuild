@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.navBar {
+    display: grid;
+   background-color: rgba(8, 4, 59, 0.753);
+    grid-template-areas: "logo home nav create space again weno weno weno weno";
+    /*background-color: #ff9100;
+    *//*border-bottom: 4px solid #ff9100;
+    */padding: 2px;
+   
+}
+
+
+.logoApp {
+    width: 60px;
+    height: 60px;
+    grid-area: logo;
+    display: flex;
+}
+
+
+
+.navigation {
+    grid-area: space;
+    display: flex;
+    justify-content: space-evenly;
+    font-family: "Segoe UI";
+} 
+
+
+
+.navigation li {
+    margin: auto;
+    list-style: none;
+    /* border-bottom:3px solid #000000 ; */
+    padding: 3px;
+    
+}
+
+.navigation li a {
+    text-align: center;
+    font-size: 25px;
+    text-decoration: none;
+    letter-spacing: 0.1rem;
+    margin: auto;
+    color: #ffffff;
+    /* font-weight: bold; */
+    transition: color, text-shadow 250ms;
+    transition: all 0.4s;
+} 
+
+.navigation li a:hover {
+    color: #57df94;
+    font-size: 26px;
+    text-shadow: -1px -1px 20px rgb(88, 88, 88), 1px 1px 20px rgb(117, 117, 117);
+    cursor: pointer;
+} 
+
+.navigation li .logout{
+    grid-area: weno;
+    margin-right: 50px;
+  
+}
