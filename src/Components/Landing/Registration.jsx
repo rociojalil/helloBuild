@@ -32,6 +32,7 @@ function Registration() {
             swal("Succes!", "Account Created successfully!   Now Log In to your account", "success")
             localStorage.setItem("email", JSON.stringify(email));
             localStorage.setItem("password", JSON.stringify(password));
+            localStorage.setItem("name", JSON.stringify(name));
             // console.log("Saved in Local Storage");
 
             setLogin(!login)

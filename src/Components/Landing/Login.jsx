@@ -3,6 +3,7 @@ import { Alert } from 'react-bootstrap';
 import './Registration.css'
 // import Home from '../home/Home';
 import swal from 'sweetalert';
+import {Link, Redirect} from 'react-router-dom';
 
 function Login() {
 
@@ -70,7 +71,7 @@ function Login() {
 
                 {flag }
             </form>
-                : <h1>HOLA INGRESASTE</h1>
+                : <div><Redirect to="/home"></Redirect></div>
             }
           
             
