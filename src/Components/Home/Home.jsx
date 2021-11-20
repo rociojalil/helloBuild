@@ -28,7 +28,7 @@ export default function Home () {
                 <h1>Welcome! </h1>
                 <h2> Let's see here all your repositories on your Github account </h2>
                 <br/>
-                <Button href={'https://github.com/login/oauth/authorize?client_id=02786d548f6f188ef721&redirect_uri=http://localhost:3000/repositories'} variant="contained">Click here to link your account</Button>
+                <Button href={'https://github.com/login/oauth/authorize?client_id=4fdf72fadddd06cc806f&redirect_uri=http://localhost:3001/users/repo'} variant="contained">Click here to link your account</Button>
                 <br/><br/>
                 <p className={styles.info}> If you are not logged into your account, you can do it there!</p>
                 

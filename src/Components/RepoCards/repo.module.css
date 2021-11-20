@@ -1,0 +1,8 @@
+.main {
+    background-image: linear-gradient(to top, rgba(45, 230, 116, 0.404) 0%, #00000085 100%);
+    /* background-image: linear-gradient(to top, rgba(150, 150, 150, 0.404) 0%, #00000085 100%), url(./img/otro\ fondo.jpg); */
+    /* background: url(../img/otra.jpg); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
