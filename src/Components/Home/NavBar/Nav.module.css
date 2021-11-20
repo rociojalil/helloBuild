@@ -5,7 +5,7 @@
 .navBar {
     display: grid;
    background-color: rgba(8, 4, 59, 0.753);
-    grid-template-areas: "logo home nav create space again weno weno weno weno";
+    grid-template-areas: "logo home nav create space again weno weno weno weno hola";
     /*background-color: #ff9100;
     *//*border-bottom: 4px solid #ff9100;
     */padding: 2px;
@@ -18,6 +18,15 @@
     height: 60px;
     grid-area: logo;
     display: flex;
+}
+
+
+.logout {
+    width: 60px;
+    height: 60px;
+    grid-area: hola;
+    display: flex;
+    align-items: center;
 }
 
 
@@ -41,7 +50,7 @@
 
 .navigation li a {
     text-align: center;
-    font-size: 25px;
+    font-size: 20px;
     text-decoration: none;
     letter-spacing: 0.1rem;
     margin: auto;
@@ -53,7 +62,7 @@
 
 .navigation li a:hover {
     color: #57df94;
-    font-size: 26px;
+    font-size: 22px;
     text-shadow: -1px -1px 20px rgb(88, 88, 88), 1px 1px 20px rgb(117, 117, 117);
     cursor: pointer;
 } 

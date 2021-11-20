@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import Video from './media/codigo.mp4'
 import styles from './Landing.module.css';
 import logo from './media/github.png'

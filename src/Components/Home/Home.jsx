@@ -1,6 +1,8 @@
 import React from 'react';
 import NavBar from './NavBar/Navbar';
 import styles from './Home.module.css';
+import { Button } from '@mui/material';
+import logo from '../Landing/media/github.png'
 
 
 
@@ -21,7 +23,16 @@ export default function Home () {
                 <br />
                 <br />
                 <br />
-                <h1>Hello World</h1>
+                <div className={styles.text}>
+                <img src={logo} alt="logo" className={styles.logo}/>
+                <h1>Welcome! </h1>
+                <h2> Let's see here all your repositories on your Github account </h2>
+                <br/>
+                <Button href={'https://github.com/login/oauth/authorize?client_id=02786d548f6f188ef721&redirect_uri=http://localhost:3000/repositories'} variant="contained">Click here to link your account</Button>
+                <br/><br/>
+                <p className={styles.info}> If you are not logged into your account, you can do it there!</p>
+                
+                </div>
                 <br />
                 <br />
                 <br />
