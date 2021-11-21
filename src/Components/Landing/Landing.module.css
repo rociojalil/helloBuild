@@ -12,8 +12,6 @@
     position: absolute;
     top: 12%;
     left: 50%;
-    /* margin: 0; */
-    /* padding: 0 20px; */
     font-size: 30px;
     color:rgb(255, 255, 255);
     transform: translate(-50%,-50%);
@@ -24,8 +22,6 @@
     position: absolute;
     top: 18%;
     left: 40%;
-    /* margin: 0; */
-    /* padding: 0 20px; */
     font-size: 20px;
     color:rgb(255, 255, 255);
    
@@ -36,8 +32,6 @@
     top: 18%;
     left: 61%;
     width: 1.5%;
-    /* margin: 0; */
-    /* padding: 0 20px; */
     font-size: 20px;
     color:rgb(255, 255, 255);
 
@@ -53,14 +47,8 @@
 }
 
 .socialMedia {
-    /* width: 50%; */
     margin-top: 50px;
-
-	
-    /* color: white; */
     color: rgb(255, 255, 255);
-  
- 
     margin-left: 5px;
     text-align: center;
    font-weight: 600;

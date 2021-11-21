@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { Form, Alert } from 'react-bootstrap';
 import Login from './Login';
 import './Registration.css'
 import swal from 'sweetalert';
@@ -63,12 +62,12 @@ function Registration() {
 
                 <div className="login-form">
                 <input type="text" className="form-control" placeholder="Username" name="name" onChange={(event) => setUser(event.target.value)}/>
-                    
-                    {/* <input type="text" className="form-control" placeholder="Enter Full Name" name="name" onChange={(event) => setName(event.target.value)} /> */}
-                    <div class="name-inputs">
+          
+                <div class="name-inputs">
                 <input type="text" className="form-control" placeholder="First Name" name="name" onChange={(event) => setName(event.target.value)}/>
                  <input type="text" className="form-control" placeholder="Last Name" name="lastname" onChange={(event) => setLastname(event.target.value)}/>
                 </div>
+                
                 <input type="email" className="form-control" placeholder="E-mail" name="email" onChange={(event) => setEmail(event.target.value)}/>
                 <input type="password" className="form-control" placeholder="Password" name="password" onChange={(event) => setPassword(event.target.value)}/>
 

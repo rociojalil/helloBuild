@@ -10,6 +10,7 @@ import Home from './Components/Home/Home.jsx';
 import Repos from './Components/RepoCards/repoCards'
 import { DataProvider } from './Context/dataProvider'
 import NavBar from './Components/Home/NavBar/Navbar'
+import Favorites from './Components/RepoCards/favorites'
 
 
 
@@ -20,13 +21,15 @@ function App() {
       <React.Fragment>
 
            <BrowserRouter>
-           <DataProvider>
+            <DataProvider>
               <Route exact path="/home" component={NavBar}/>
               <Route exact path="/repositories" component={NavBar}/>
               <Route exact path="/" component={Landing}/>
               <Route exact path="/home" component={Home}/>
               <Route exact path="/repositories" component={Repos}/>
-              </DataProvider>
+              <Route exact path="/repositories/favorites" component={Favorites}/>
+              <Route exact path="/repositories/favorites" component={NavBar}/>
+            </DataProvider>
            
           </BrowserRouter>
       </React.Fragment>

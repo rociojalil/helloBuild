@@ -16,7 +16,7 @@
     border: 2px solid #ffffff;
     background-color: rgba(88, 88, 88, 0.425);;
     width: 320px;
-    height: 260px;
+    height: 300px;
     margin: 1px 3px;
     border-radius: 15px;
     padding: 10px;
@@ -48,13 +48,6 @@
 }
 
 
-.cardContainer img:hover {
-    width: auto;
-    height: 189px;
-    display: flex;
-    justify-content: center;
-}
-
 .cardName {
     text-align: center;
     color: #ffffff;
@@ -75,58 +68,8 @@
     margin-bottom: 10px;
     margin-left: 20px;
 }
-.cardType {
-    text-align: center;
-    color: #ffffff;
-    text-shadow: 2px 2px 1px #000000;
-    font-size: 18px;
-    font-weight: bold;
-    letter-spacing: 2px;
-   bottom: -80px;
-    margin-left: 25px;
-}
-.types {
-    text-align: center;
-    color: #f7e70a;
-    text-shadow: 2px 2px 1px #000000;
-    font-size: 18px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    margin-bottom: -20px;
-    margin-left: 25px;
-}
 
-.pagination {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    background-color: #3b3b3b;
-    width: 400px;
-    margin: auto;
-    border-radius: 20px;
-    border: 2px solid white;
-}
-
-.pagination li {
-    text-align: center;
+.click{
     color: white;
-    width: fit-content;
-    background-color: transparent;
-    padding: 10px;
-    /* border: 1px solid white; */
-    cursor: pointer;
-    font-size: 25px;
-    font-weight: bolder;
-}
-
-
-
-.doggy{
-    font-family: sans-serif;
-    color: #ffffff;
-    text-shadow: 2px 2px #000000;
-    font-size: 27px;
-    font-weight: bolder;
-    text-align: center;
-
+    margin-left: 24px;
 }

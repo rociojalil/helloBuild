@@ -45,8 +45,6 @@ function Login() {
             <div className="form-container">
             <h4 className="form-heading">Log In</h4>
             <div className="login-form">
-
-
                 <div className="form-group">
                     <label>Email</label>
                     <br/>
@@ -55,15 +53,10 @@ function Login() {
                 <br/>
                 <input type="password" className="form-control" placeholder="Enter Password" name="password" onChange={(event) => setPasswordlog(event.target.value)}/>
 
-
-
                 </div>
                 <button type="submit" class="signup-btn">
-             Login <i class="fas fa-arrow-right"></i>
-         </button>
-        
-        
-                
+                Login <i class="fas fa-arrow-right"></i>
+                </button>  
                 </div>
                 </div>
                 </div>
@@ -72,47 +65,8 @@ function Login() {
             </form>
                 : <div><Redirect to="/home"></Redirect></div>
             }
-          
-            
-
-        </div>
-        
-         
+        </div>     
     )
 }
 
 export default Login
-
-// <!DOCTYPE html>
-// <html lang="en">
-//   <head>
-//     <meta charset="UTF-8" />
-//     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-//     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-// <link rel="preconnect" href="https://fonts.googleapis.com">
-// <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-// <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,700&display=swap" rel="stylesheet">
-
-//     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-//     <title>Login Form</title>
-//   </head>
-//   <body>
-//       <div class="form-container">
-//           <h4 class="form-heading">Create Account</h4>
-//           <p class="signIn-text">Already Have An Account? 
-//             <a href="#">Sign In</a></p>
-//     <form class="login-form">
-//         <input type="text" placeholder="Username" />
-//         <div class="name-inputs">
-//         <input type="text" placeholder="First Name" />
-//         <input type="text" placeholder="Last Name" />
-//         </div>
-//         <input type="email" placeholder="E-mail" />
-//         <button class="signup-btn">
-//             sign up <i class="fas fa-arrow-right"></i>
-//         </button>
-//     </form>
-//       </div>
-//   </body>
-// </html>

@@ -16,7 +16,7 @@ function Nav() {
             <ol className={styles.navigation}>
                 <li><a href="/home">Welcome</a></li>
                 <li><a href="/repositories">Repositories</a></li>
-                <li><a href="/">Favorites</a></li>
+                <li><a href="/repositories/favorites">Favorites</a></li>
             </ol>
             <div className={styles.logout}>
                 <Link to="/">

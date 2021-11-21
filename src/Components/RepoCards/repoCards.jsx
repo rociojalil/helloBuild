@@ -16,7 +16,6 @@ export default function Repos() {
               return (response.data) 
             })
             setRepos([...repositories])
-            // los repos se guardan en ese estado? xq? para pasarlo como prop desp?
         })()
     }, [])
 
