@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import styles from './repo.module.css';
 import Github from '../Landing/media/github.png'
-import { DataContext } from "../../Context/dataProvider"
+import { DataContext } from "../../DataContext/dataProvider"
 import { Button } from '@mui/material';
 import swal from 'sweetalert';
 
@@ -11,20 +11,19 @@ export default function RepoCard({ repo }) {
   const value = useContext(DataContext)
   const [favorite, setFavorite] = value.favorite
 
-  async function handleFavorite(event) {
-    let fav = favorite.map( e => e.id).includes(repo.id)
+  async function Favorite(event) {
+    let favoritos = favorite.map( e => e.id).includes(repo.id)
+    // acá se debe validar que no se agregue un repositorio que ya está en favoritos
     event.preventDefault()
-    if(!fav){
-      let obj = {
+    if(!favoritos){
+      // acá se agrega el repositorio a favoritos
+      let repo = {
         id: repo.id,
         name: repo.name,
-        language: repo.language,
-        defaultBranch: repo.defaultBranch,
-        created: repo.created,
-        visibility: repo.visibility
+        language: repo.language
     }
-      setFavorite([...favorite, obj])
-      console.log(value.favorite);
+      setFavorite([...favorite, repo])
+      // console.log(value.favorite);
       swal("Succes!", "Added to your favorites", "success")
     }
   }
@@ -37,12 +36,9 @@ export default function RepoCard({ repo }) {
         <img className={styles.img} src={Github} alt="github"/>
         <h5 className={styles.cardName} >Name: {repo.name}</h5>
         <h5 className={styles.cardAttack}>Language: {repo.language}</h5>
-        <h5 className={styles.cardAttack}>Default branch: {repo.defaultBranch}</h5>
-        <h5 className={styles.cardAttack}>Created: {repo.created}</h5>
-        <h5 className={styles.cardAttack}> Visibility: {repo.visibility}</h5>
         <a className={styles.click} href={repo.url} target="_blank" rel="noreferrer"> Click here to open your repository </a>
           <br /> <br />
-        <Button className={styles.button} variant="contained" color="success" onClick={handleFavorite}>Favorite</Button>
+        <Button className={styles.button} variant="contained" color="success" onClick={Favorite}>Favorite</Button>
        
         </div>
         

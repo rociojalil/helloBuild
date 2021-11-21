@@ -1,7 +1,7 @@
 import React, {useContext} from "react";
-import styles from './repositorie.module.css';
-import FavCard from './favCard';
-import { DataContext } from '../../Context/dataProvider'
+import styles from '../Repositories/repositorie.module.css';
+import FavoriteCards from './CardFavoritos';
+import { DataContext } from '../../DataContext/dataProvider'
 
 export default function Favorites() {
   
@@ -13,7 +13,7 @@ export default function Favorites() {
     
     <div className={styles.main}>
           {favorite && favorite?.map(repo=>{
-            return <FavCard repo={repo} key={repo.id}/>
+            return <FavoriteCards repo={repo} key={repo.id}/>
           })}
         </div>
        

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import styles from './repositorie.module.css';
-import RepoCard from './repoCard';
+import Card from './Card';
 // import NavBar from '../Home/NavBar/Navbar';
 
 export default function Repos() {
@@ -12,8 +12,8 @@ export default function Repos() {
     useEffect(() => {
         (async function () {
             const repositories = await axios.get("http://localhost:3001/users/info")
-            .then((response) => { 
-              return (response.data) 
+            .then((res) => { 
+              return (res.data) 
             })
             setRepos([...repositories])
         })()
@@ -24,8 +24,8 @@ export default function Repos() {
           <h5 className={styles.titulo}>These are your repositories:</h5>
         <div className={styles.main}>
           
-          {repos && repos?.map( repo => {
-            return <RepoCard repo = {repo} />
+          {repos.map( repo => {
+            return <Card repo = {repo} />
           })}
         </div>
         </div>

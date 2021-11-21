@@ -1,11 +1,11 @@
 import React, { useContext} from 'react';
-import styles from './repo.module.css'
+import styles from '../Repositories/repo.module.css'
 import Github from '../Landing/media/github.png'
 import { Button } from '@mui/material';
-import { DataContext } from '../../Context/dataProvider'
+import { DataContext } from '../../DataContext/dataProvider'
 
 
-export default function FavCard({ repo }) {
+export default function FavoriteCards({ repo }) {
 
   const value = useContext(DataContext)
     const [favorite, setFavorite] = value.favorite
@@ -13,10 +13,10 @@ export default function FavCard({ repo }) {
 
 
 
-  function handleDeleteFavorite(event) {
+  function Delete(event) {
     event.preventDefault()
-    let favorites = favorite.filter(e=> e.id !== repo.id);
-      setFavorite([...favorites])
+    let favoritesDelete = favorite.filter( favorite => favorite.id !== repo.id);
+      setFavorite([...favoritesDelete])
     }
     
   return (
@@ -31,7 +31,7 @@ export default function FavCard({ repo }) {
         <h5 className={styles.cardAttack}> Visibility: {repo.visibility}</h5>
         <a className={styles.click} href={repo.url} target="_blank" rel="noreferrer"> Click here to open your repository </a>
         <br />  <br />
-      <Button className={styles.button} variant="contained" color="error" onClick={handleDeleteFavorite}> Delete </Button>
+      <Button className={styles.button} variant="contained" color="error" onClick={Delete}> Delete </Button>
         </div>
         
       </div>

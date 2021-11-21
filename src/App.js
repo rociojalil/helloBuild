@@ -7,10 +7,10 @@ import 'boxicons';
 import React from 'react';
 import Landing from './Components/Landing/Landing';
 import Home from './Components/Home/Home.jsx';
-import Repos from './Components/RepoCards/repoCards'
-import { DataProvider } from './Context/dataProvider'
+import Repos from './Components/Repositories/Repos'
+import { DataProvider } from './DataContext/dataProvider'
 import NavBar from './Components/Home/NavBar/Navbar'
-import Favorites from './Components/RepoCards/favorites'
+import Favorites from './Components/Favorite/Favorite'
 
 
 
