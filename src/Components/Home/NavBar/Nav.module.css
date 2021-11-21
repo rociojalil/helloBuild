@@ -3,6 +3,7 @@
     padding: 0;
 }
 .navBar {
+    /* display: flex; */
     display: grid;
    background-color: rgba(8, 4, 59, 0.753);
     grid-template-areas: "logo home nav create space again weno weno weno weno hola";

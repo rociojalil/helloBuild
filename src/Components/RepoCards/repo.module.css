@@ -4,20 +4,21 @@
 }
 
 .main {
-     display: flex; 
-     flex-wrap: wrap; 
-    justify-content: center; 
-    margin: -15px;
-    margin-bottom: 50px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* margin: -15px; */
+    margin-top: 150px;
 }
 
 .cardContainer {
-    border: 2px solid #ffffff;
-    background-color: rgba(199, 199, 199, 0.568);
+    border: 1px solid #ffffff;
+    background-color: rgba(33, 189, 116, 0.247);;
     width: 250px;
     height: 150px;
     margin: 1px 5px;
-    border-radius: 20px;
+    border-radius: 15px;
     padding: 10px;
     transition: box-shadow, 10ms;
     transition: border, 500ms;

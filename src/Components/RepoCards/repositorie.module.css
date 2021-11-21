@@ -1,3 +1,10 @@
 .main{
     background-image: linear-gradient(to top, rgba(45, 230, 116, 0.404) 0%, #00000085 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
 }

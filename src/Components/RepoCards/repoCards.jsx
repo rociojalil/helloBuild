@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import styles from './repositorie.module.css';
 import RepoCard from './repoCard';
-import NavBar from '../Home/NavBar/Navbar';
+// import NavBar from '../Home/NavBar/Navbar';
 
 export default function Repos() {
 
@@ -23,7 +23,7 @@ export default function Repos() {
     return (
         
         <div className={styles.main}>
-          <NavBar/>
+          {/* <NavBar/> */}
           <h1>These are your repositories:</h1>
           {repos && repos?.map( repo => {
             return <RepoCard repo = {repo} />

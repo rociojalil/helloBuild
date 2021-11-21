@@ -80,7 +80,7 @@ const saveRepos = async (req, res) => {
         })
 
    
-    res.redirect('http://localhost:3002/repositories')
+    res.redirect('http://localhost:3000/repositories')
         }
     // redirecciono a la pagina de repositorios
     }

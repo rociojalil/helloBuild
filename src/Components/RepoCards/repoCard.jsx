@@ -30,14 +30,14 @@ export default function RepoCard({ repo }) {
   return (
     <div className={styles.main}>
     <div className={styles.cardContainer} key={repo.id}>
-      <div id="card">
-      <Button onClick={handleFavorite}> Favorite </Button>
+      <div >
         <h5 >Name: {repo.name}</h5>
         <h5 >Language: {repo.language}</h5>
         <h5 >Default branch: {repo.defaultBranch}</h5>
         <h5 >Created: {repo.created}</h5>
         <h5> Visibility: {repo.visibility}</h5>
         <a href={repo.url}>
+        <Button onClick={handleFavorite}> Favorite </Button>
           {/* <img id="img" src={Github} /> */}
         </a>
         </div>

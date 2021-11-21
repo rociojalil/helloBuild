@@ -1,5 +1,4 @@
 import React from 'react';
-import NavBar from './NavBar/Navbar';
 import styles from './Home.module.css';
 import { Button } from '@mui/material';
 import logo from '../Landing/media/github.png'
@@ -12,9 +11,6 @@ export default function Home () {
     return (
         
             <div className={styles.main}>
-                <div>
-                    <NavBar />
-                </div>
                 <br />
                 <br />
                 <br />
