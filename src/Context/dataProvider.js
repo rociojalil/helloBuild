@@ -3,7 +3,7 @@ export const DataContext = createContext();
 
 export const DataProvider = (props) => {
 
-	const [favorite,setFavorite] = useState([])
+	const [favorite, setFavorite] = useState([])
 	
 	
 	const value = {

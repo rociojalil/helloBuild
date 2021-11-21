@@ -14,9 +14,9 @@ function Nav() {
                 {/* <i class="fas fa-paw"></i> */}
             </div >
             <ol className={styles.navigation}>
-                <li><a href="/home">Welcome</a></li>
-                <li><a href="/repositories">Repositories</a></li>
-                <li><a href="/repositories/favorites">Favorites</a></li>
+                <li><Link to="/home">Welcome</Link></li>
+                <li><Link to="/repositories">Repositories</Link></li>
+                <li><Link to="/repositories/favorites">Favorites</Link></li>
             </ol>
             <div className={styles.logout}>
                 <Link to="/">
