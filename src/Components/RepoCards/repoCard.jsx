@@ -3,6 +3,7 @@ import styles from './repo.module.css';
 import Github from '../Landing/media/github.png'
 import { DataContext } from "../../Context/dataProvider"
 import { Button } from '@mui/material';
+import swal from 'sweetalert';
 
 
 export default function RepoCard({ repo }) {
@@ -12,7 +13,6 @@ export default function RepoCard({ repo }) {
 
   async function handleFavorite(event) {
     let fav = favorite.map( e => e.id).includes(repo.id)
-    console.log(fav);
     event.preventDefault()
     if(!fav){
       let obj = {
@@ -25,6 +25,7 @@ export default function RepoCard({ repo }) {
     }
       setFavorite([...favorite, obj])
       console.log(value.favorite);
+      swal("Succes!", "Added to your favorites", "success")
     }
   }
 

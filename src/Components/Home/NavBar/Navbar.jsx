@@ -11,7 +11,6 @@ function Nav() {
         <div className={styles.navBar}>
             <div className={styles.logoApp}>
                 <img src={logo} alt="logo" />
-                {/* <i class="fas fa-paw"></i> */}
             </div >
             <ol className={styles.navigation}>
                 <li><Link to="/home">Welcome</Link></li>

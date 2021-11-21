@@ -30,8 +30,8 @@ export default function FavCard({ repo }) {
         <h5 className={styles.cardAttack}>Created: {repo.created}</h5>
         <h5 className={styles.cardAttack}> Visibility: {repo.visibility}</h5>
         <a className={styles.click} href={repo.url} target="_blank" rel="noreferrer"> Click here to open your repository </a>
-        <br />  
-      <Button className={styles.button} variant="outlined" color="error" onClick={handleDeleteFavorite}> Delete </Button>
+        <br />  <br />
+      <Button className={styles.button} variant="contained" color="error" onClick={handleDeleteFavorite}> Delete </Button>
         </div>
         
       </div>
@@ -39,20 +39,6 @@ export default function FavCard({ repo }) {
     </div>
 
   );
-    // <div id="a" key={repo.id}>
-    //   <div id="card">
-    //   <Button onClick={handleDeleteFavorite}> Delete </Button>
-    //     <h5 >Name: {repo.name}</h5>
-    //     <h5 >Language: {repo.language}</h5>
-    //     <h5 >Default branch: {repo.defaultBranch}</h5>
-    //     <h5 >Created: {repo.created}</h5>
-    //     <a href={repo.url}>
-    //       <img id="img" src={Github} />
-    //     </a>
-        
-    //   </div>
-      
-    // </div>
 
 }
 
