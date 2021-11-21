@@ -8,3 +8,11 @@
     justify-content: center;
 
 }
+
+.titulo{
+    background-color: #ffffff;
+    color: #494949;
+    font-size: 23px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}

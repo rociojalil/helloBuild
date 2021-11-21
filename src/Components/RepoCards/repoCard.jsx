@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import styles from './repo.module.css';
-// import Github from '../images/github.png'
-import { Button } from 'react-bootstrap'
+import Github from '../Landing/media/github.png'
 import { DataContext } from "../../Context/dataProvider"
+import { Button } from '@mui/material';
 
 
 export default function RepoCard({ repo }) {
@@ -31,14 +31,16 @@ export default function RepoCard({ repo }) {
     <div className={styles.main}>
     <div className={styles.cardContainer} key={repo.id}>
       <div >
-        <h5 >Name: {repo.name}</h5>
-        <h5 >Language: {repo.language}</h5>
-        <h5 >Default branch: {repo.defaultBranch}</h5>
-        <h5 >Created: {repo.created}</h5>
-        <h5> Visibility: {repo.visibility}</h5>
+          <img className={styles.img} src={Github} />
+        <h5 className={styles.cardName} >Name: {repo.name}</h5>
+        <h5 className={styles.cardAttack}>Language: {repo.language}</h5>
+        <h5 className={styles.cardAttack}>Default branch: {repo.defaultBranch}</h5>
+        <h5 className={styles.cardAttack}>Created: {repo.created}</h5>
+        <h5 className={styles.cardAttack}> Visibility: {repo.visibility}</h5>
         <a href={repo.url}>
-        <Button onClick={handleFavorite}> Favorite </Button>
-          {/* <img id="img" src={Github} /> */}
+          <br />
+        <Button className={styles.button} variant="contained" color="success" onClick={handleFavorite}>Favorite</Button>
+        {/* <Button onClick={handleFavorite}> Favorite </Button> */}
         </a>
         </div>
         

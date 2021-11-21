@@ -21,13 +21,13 @@ export default function Repos() {
     }, [])
 
     return (
-        
+        <div>
+          <h5 className={styles.titulo}>These are your repositories:</h5>
         <div className={styles.main}>
-          {/* <NavBar/> */}
-          <h1>These are your repositories:</h1>
           {repos && repos?.map( repo => {
             return <RepoCard repo = {repo} />
           })}
+        </div>
         </div>
     )
 }

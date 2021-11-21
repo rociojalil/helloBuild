@@ -8,16 +8,16 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    /* margin: -15px; */
-    margin-top: 150px;
+    margin: 12px;
+    margin-top: 50px;
 }
 
 .cardContainer {
-    border: 1px solid #ffffff;
-    background-color: rgba(33, 189, 116, 0.247);;
-    width: 250px;
-    height: 150px;
-    margin: 1px 5px;
+    border: 2px solid #ffffff;
+    background-color: rgba(88, 88, 88, 0.425);;
+    width: 320px;
+    height: 260px;
+    margin: 1px 3px;
     border-radius: 15px;
     padding: 10px;
     transition: box-shadow, 10ms;
@@ -32,11 +32,21 @@
 }
 
 .cardContainer img {
-    width: auto;
-    height: 180px;
-    display: flex;
+    /* width: auto; */
+    height: 50px;
     justify-content: center;
+    margin-left: 130px;
+    /* margin-bottom: 500px; */
 }
+.button{
+   left: 93px;
+}
+
+.button:hover{
+    cursor: pointer;
+
+}
+
 
 .cardContainer img:hover {
     width: auto;
@@ -48,23 +58,22 @@
 .cardName {
     text-align: center;
     color: #ffffff;
-    text-shadow: 2px 2px 1px #000000;
-    font-size: 23px;
+    text-shadow: 1px 1px 1px #000000;
+    font-size: 15px;
     font-weight: bold;
     letter-spacing: 2px;
     margin-bottom: 10px;
-    margin-left: 27px;
 }
 
 .cardAttack {
     text-align: center;
-    color: #f7e70a;
-    text-shadow: 2px 2px 1px #000000;
-    font-size: 20px;
+    color: #000000;
+    /* text-shadow: 2px 2px 1px #ffffff; */
+    font-size: 14px;
     font-weight: bold;
-    letter-spacing: 2px;
+    letter-spacing: 0.5px;
     margin-bottom: 10px;
-    margin-left: 25px;
+    margin-left: 20px;
 }
 .cardType {
     text-align: center;
@@ -110,59 +119,7 @@
     font-weight: bolder;
 }
 
-.pagination li.active {
-    /* background-color: white; */
-    color: #000000;
-}
 
-.pagination li button {
-    background-color: transparent;
-    display: flex;
-    border: none;
-    color: white;
-    cursor: pointer;
-    padding: 2px;
-    font-size: 20px;
-    font-weight: bold;
-    border-radius: 20px;
-    transition: color 500ms;
-}
-
-.pagination li button:hover {
-    /* background-color: white; */
-    border-radius: 20px;
-    color: #000000;
-}
-
-.msgError {
-    color: #ff9100;
-    text-shadow: 2px 2px #000000;
-    font-size: 50px;
-    font-weight: bold;
-    text-align: center;
-}
-
-.cardError {
-    background-color: #000000c7;
-    padding: 20px;
-    justify-content: center;
-    border-radius: 20px;
-    box-shadow: 0px 0px 15px 2px #ff910088;
-}
-
-.cardError img {
-    display: flex;
-    margin: auto;
-    border-radius: 20px;
-}
-
-/* .msgCharge {
-    color: #ffffff;
-    text-shadow: 1px 1px #000000;
-    font-size: 35px;
-    font-weight: bolder;
-    text-align: center;
-} */
 
 .doggy{
     font-family: sans-serif;
@@ -171,33 +128,5 @@
     font-size: 27px;
     font-weight: bolder;
     text-align: center;
-
-}
-/* .containerLoading {
-    background-color: #000000b4;
-    border-radius: 30px;
-    padding: 15px;
-} */
-
-.detail p {
-    text-align: center;
-    /* margin: auto; */
-    font-size: 22px;
-    font-weight: bold;
-    border: 1px solid #ffffff;
-    background: rgb(0, 0, 0);
-    border-radius: 5px;
-    margin-top: 30px;
-    /* background-color: #ff9100; */
-    color: #ffffff;
-    text-shadow: 2px 2px 1px #000000;
-    /* width: fit-content; */
-    padding: 5px 15px;
-}
-
-.detail p:hover{
-    /* border: 2px solid yellow; */
-    box-shadow: 0 0 5px 1px #ffffff;
-    border: 1px solid transparent;
 
 }
