@@ -21,7 +21,8 @@ function App() {
 
            <BrowserRouter>
            <DataProvider>
-              <Route path="/" component={NavBar}/>
+              <Route exact path="/home" component={NavBar}/>
+              <Route exact path="/repositories" component={NavBar}/>
               <Route exact path="/" component={Landing}/>
               <Route exact path="/home" component={Home}/>
               <Route exact path="/repositories" component={Repos}/>
