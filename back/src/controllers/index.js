@@ -63,7 +63,9 @@ const saveRepos = async (req, res) => {
                     name: repo.name,
                     language: repo.language,
                     created: repo.created_at.slice(0,10),
-                    url: repo.html_url
+                    url: repo.html_url,
+                    visibility: repo.visibility,
+                  
                 }
                 // creo un objeto con los datos que quiero mostrar del repo
                 
