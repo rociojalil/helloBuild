@@ -26,9 +26,6 @@ export default function FavoriteCards({ repo }) {
         <img className={styles.img} src={Github} alt="github" />
         <h5 className={styles.cardName} >Name: {repo.name}</h5>
         <h5 className={styles.cardAttack}>Language: {repo.language}</h5>
-        <h5 className={styles.cardAttack}>Default branch: {repo.defaultBranch}</h5>
-        <h5 className={styles.cardAttack}>Created: {repo.created}</h5>
-        <h5 className={styles.cardAttack}> Visibility: {repo.visibility}</h5>
         <a className={styles.click} href={repo.url} target="_blank" rel="noreferrer"> Click here to open your repository </a>
         <br />  <br />
       <Button className={styles.button} variant="contained" color="error" onClick={Delete}> Delete </Button>

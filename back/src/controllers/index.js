@@ -6,7 +6,7 @@ var usersInfo = []
 async function getGithubUser(code) {
 
     const githubToken = await axios.post(
-        `https://github.com/login/oauth/access_token?client_id=4fdf72fadddd06cc806f&client_secret=888e4b4fefe1896144b9db7dfc3cfe4f01fa08f6&code=${code}`)
+        `https://github.com/login/oauth/access_token?client_id=a3b0deff790f5d29c56f&client_secret=74d4b0868b7fced82e2f074d9a8089e467b65396&code=${code}`)
         .then((response) => { 
             return (response.data) 
         })
@@ -75,7 +75,7 @@ async function getGithubUser(code) {
 
             // console.log(usersInfo[0].repos[0])
             // si me trae informacion de los repositorios
-            console.log(obj)
+            // console.log(obj)
             return (obj)
             // guardo el objeto en el arreglo de usuarios vacio de arriba inicializado
         })
@@ -86,9 +86,10 @@ async function getGithubUser(code) {
     }
 
 const getRepos = async (req, res) => { 
-  res.send(usersInfo[0].repos)
-}
 
+
+    res.send(usersInfo[0].repos)
+}
 
 module.exports = {  saveRepos, getRepos }
 

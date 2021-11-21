@@ -17,12 +17,12 @@ export default function RepoCard({ repo }) {
     event.preventDefault()
     if(!favoritos){
       // acá se agrega el repositorio a favoritos
-      let repo = {
+      let repoObj = {
         id: repo.id,
         name: repo.name,
         language: repo.language
     }
-      setFavorite([...favorite, repo])
+      setFavorite([...favorite, repoObj])
       // console.log(value.favorite);
       swal("Succes!", "Added to your favorites", "success")
     }
