@@ -48,10 +48,13 @@ async function getGithubUser(code) {
     
 
             if (!userId.includes(githubUser.id)) {
+                // si el usuario no esta en la base 
+                // lo agrego 
                 let obj = {
                     id: githubUser.id,
                     repos: []
                 }
+                
         
         await axios.get(githubUser.repos_url).then(response => {
                 // console.log(response.data)

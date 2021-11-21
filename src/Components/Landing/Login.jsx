@@ -23,8 +23,7 @@ function Login() {
         if (!emaillog || !passwordlog) {
             setFlag(true);
             return swal("Error", "Missing data entry, try again!", "error")
-            
-            // console.log("EMPTY");
+           
         } else if ((passwordlog !== pass) || (emaillog !== mail)) {
             setFlag(true);
             return swal("Error", "Wrong email or password, try again!", "error")

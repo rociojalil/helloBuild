@@ -3,7 +3,8 @@ import styles from './repositorie.module.css';
 import FavCard from './favCard';
 import { DataContext } from '../../Context/dataProvider'
 
-export default function Favorites({repo}) {
+export default function Favorites() {
+  
   const value = useContext(DataContext)
   const [favorite, setFavorite] = value.favorite
   console.log(favorite)
