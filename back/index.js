@@ -3,7 +3,7 @@ const app = express();
 const PORT = 3001;
 const morgan = require('morgan');
 
-const UsersRoutes = require("./src/routes/user")
+const githubRoutes = require("./src/routes/user")
 
 
 
@@ -17,7 +17,7 @@ app.use((req, res, next) => {
 app.use(express.json());
 app.use(morgan('tiny'));
 
-app.use('/users',UsersRoutes)
+app.use('/users', githubRoutes);
 
 
 app.listen(PORT,()=>{

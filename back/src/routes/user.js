@@ -1,9 +1,9 @@
-const  { saveRepos, getRepos}  = require( '../controllers/index')
+const  { allRepos, showRepos}  = require( '../controllers/index')
 
 const { Router } = require('express')
 const router = Router()
 
-router.get('/repo',saveRepos)
-router.get('/info',getRepos)
+router.get('/repo',allRepos)
+router.get('/info',showRepos)
 
 module.exports = router;

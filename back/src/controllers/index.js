@@ -1,29 +1,29 @@
 const axios = require('axios');
 const querystring = require('query-string')
 
-var usersInfo = []
+var repoInfo = []
 
-async function getGithubUser(code) {
+async function getToken(code) {
 
-    const githubToken = await axios.post(
+    const gitToken = await axios.post(
         `https://github.com/login/oauth/access_token?client_id=a3b0deff790f5d29c56f&client_secret=74d4b0868b7fced82e2f074d9a8089e467b65396&code=${code}`)
-        .then((response) => { 
-            return (response.data) 
+        .then((res) => { 
+            return (res.data) 
         })
         // obtengo el token de github
         .catch((err) => { throw err  })
 
 
-    const decoded = querystring.parse(githubToken)
+    const parseado = querystring.parse(gitToken)
     // objeto decodificado
 
-    const accessToken = decoded.access_token
+    const token = parseado.access_token
     // obtengo el token de acceso
     // console.log(accessToken)
 
     return axios.get("https://api.github.com/user", {
         headers: { 
-            Authorization: `Bearer ${accessToken}` 
+            Authorization: `Bearer ${token}` 
         }
         })
         .then((res) => { 
@@ -33,18 +33,18 @@ async function getGithubUser(code) {
         }
 
 
-        const saveRepos = async (req, res) => {
+        const allRepos = async (req, res) => {
             const { code } = req.query
             // codigo del usuario en especifico
 
             if (!code) {
                 throw new Error("no accediste al code")
             }
-            const githubUser = await getGithubUser(code)
+            const githubUser = await getToken(code)
             // obtengo el usuario
         //   console.log(githubUser);
 
-            let userId = usersInfo.map(e => e.user_id)
+            let userId = repoInfo.map(e => e.user_id)
     
 
             if (!userId.includes(githubUser.id)) {
@@ -61,17 +61,14 @@ async function getGithubUser(code) {
             response.data.map(repo => {
                 let repoObj = {
                     id: repo.id,
-                    defaultBranch: repo.default_branch,
                     name: repo.name,
                     language: repo.language,
-                    created: repo.created_at.slice(0,10),
                     url: repo.html_url,
-                    visibility: repo.visibility,
                   
                 }
                 
                 obj.repos.push(repoObj)})
-            usersInfo.push(obj)
+            repoInfo.push(obj)
 
             // console.log(usersInfo[0].repos[0])
             // si me trae informacion de los repositorios
@@ -85,13 +82,13 @@ async function getGithubUser(code) {
         }
     }
 
-const getRepos = async (req, res) => { 
+const showRepos = async (req, res) => { 
 
 
-    res.send(usersInfo[0].repos)
+    res.send(repoInfo[0].repos)
 }
 
-module.exports = {  saveRepos, getRepos }
+module.exports = {  allRepos, showRepos }
 
 
 
