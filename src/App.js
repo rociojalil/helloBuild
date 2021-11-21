@@ -27,8 +27,8 @@ function App() {
               <Route exact path="/" component={Landing}/>
               <Route exact path="/home" component={Home}/>
               <Route exact path="/repositories" component={Repos}/>
-              <Route exact path="/repositories/favorites" component={Favorites}/>
               <Route exact path="/repositories/favorites" component={NavBar}/>
+              <Route exact path="/repositories/favorites" component={Favorites}/>
             </DataProvider>
            
           </BrowserRouter>

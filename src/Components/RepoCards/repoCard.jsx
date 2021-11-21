@@ -11,8 +11,8 @@ export default function RepoCard({ repo }) {
   const [favorite, setFavorite] = value.favorite
 
   async function handleFavorite(event) {
-    console.log(fav);
     let fav = favorite.map( e => e.id).includes(repo.id)
+    console.log(fav);
     event.preventDefault()
     if(!fav){
       let obj = {
@@ -24,6 +24,7 @@ export default function RepoCard({ repo }) {
         visibility: repo.visibility
     }
       setFavorite([...favorite, obj])
+      console.log(value.favorite);
     }
   }
 

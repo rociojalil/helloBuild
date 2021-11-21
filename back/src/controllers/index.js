@@ -45,7 +45,7 @@ async function getGithubUser(code) {
         //   console.log(githubUser);
 
             let userId = usersInfo.map(e => e.user_id)
-            console.log(userId)
+    
 
             if (!userId.includes(githubUser.id)) {
                 let obj = {
